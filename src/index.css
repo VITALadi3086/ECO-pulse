@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 140 20% 97%;
+    --foreground: 160 22% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 160 22% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 160 22% 12%;
+
+    --primary: 152 40% 27%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 140 18% 93%;
+    --secondary-foreground: 152 40% 22%;
+
+    --muted: 140 16% 94%;
+    --muted-foreground: 152 8% 38%;
+
+    --accent: 152 35% 92%;
+    --accent-foreground: 152 40% 20%;
+
+    --destructive: 0 68% 48%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 145 14% 88%;
+    --input: 145 14% 82%;
+    --ring: 152 40% 32%;
+    --radius: 0.625rem;
+
+    --chart-1: hsl(152 45% 32%);
+    --chart-2: hsl(95 32% 45%);
+    --chart-3: hsl(38 70% 52%);
+    --chart-4: hsl(16 60% 52%);
+    --chart-5: hsl(200 40% 45%);
+  }
+
+  .dark {
+    --background: 160 18% 8%;
+    --foreground: 140 15% 92%;
+
+    --card: 160 14% 11%;
+    --card-foreground: 140 15% 92%;
+
+    --popover: 160 14% 11%;
+    --popover-foreground: 140 15% 92%;
+
+    --primary: 140 35% 55%;
+    --primary-foreground: 160 25% 10%;
+
+    --secondary: 160 12% 16%;
+    --secondary-foreground: 140 15% 85%;
+
+    --muted: 160 12% 15%;
+    --muted-foreground: 145 8% 62%;
+
+    --accent: 152 20% 18%;
+    --accent-foreground: 140 20% 88%;
+
+    --destructive: 0 55% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 160 10% 20%;
+    --input: 160 10% 24%;
+    --ring: 140 30% 50%;
+
+    --chart-1: hsl(140 40% 55%);
+    --chart-2: hsl(95 35% 55%);
+    --chart-3: hsl(38 70% 58%);
+    --chart-4: hsl(16 60% 58%);
+    --chart-5: hsl(200 45% 55%);
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+  }
+}
+
+@layer components {
+  .demo-pill {
+    @apply inline-flex items-center gap-1.5 rounded-full bg-amber2-100 px-2.5 py-0.5 text-[11px] font-semibold text-amber2-800;
+  }
+  .dark .demo-pill {
+    @apply bg-amber2-900/50 text-amber2-200;
+  }
+}
